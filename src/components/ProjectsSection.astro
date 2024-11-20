@@ -1,0 +1,26 @@
+---
+import ItemCard from "./ItemCard.astro";
+import { getCollection, render } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<section id="projects">
+  <h2 class="text-4xl text-emerald-500/80 pl-4 mt-10">Projects</h2>
+  {
+    projects.map(async (project) => {
+      const { title, tags, link, notAvailableReason } = project.data;
+      const { Content } = await render(project);
+      return (
+        <ItemCard
+          title={title}
+          tags={tags}
+          link={link}
+          notAvailableReason={notAvailableReason}
+        >
+          <Content />
+        </ItemCard>
+      );
+    })
+  }
+</section>

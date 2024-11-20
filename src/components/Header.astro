@@ -1,0 +1,22 @@
+---
+import Nav from "./Nav.astro";
+import Social from "./Social.astro";
+---
+
+<header
+  class="relative md:sticky flex flex-col md:justify-between md:py-40 backdrop-blur-md px-20 z-50"
+>
+  <section class="flex flex-col">
+    <h1
+      class="text-3xl sm:text-6xl md:text-4xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-emerald-600 to-emerald-200 bg-clip-text text-transparent"
+    >
+      Juan Fco. Losa
+    </h1>
+    <p class="lg:text-lg md:text-sm sm:text-sm">
+      I'm a <strong>Full Stack Developer</strong>, I ❤️ to build digital
+      products and I'm always 👀 for new challenges.
+    </p>
+  </section>
+  <Nav />
+  <Social />
+</header>

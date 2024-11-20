@@ -1,0 +1,27 @@
+---
+import ItemCard from "./ItemCard.astro";
+import { getCollection, render } from "astro:content";
+
+const experience = await getCollection("experience");
+---
+
+<section id="experience mt-10">
+  <h2 class="text-4xl text-emerald-500/80 pl-4 mt-10">Experience</h2>
+  {
+    experience.reverse().map(async (experience) => {
+      const { title, date, tags, link, notAvailableReason } = experience.data;
+      const { Content } = await render(experience);
+      return (
+        <ItemCard
+          title={title}
+          date={experience.data.date}
+          tags={experience.data.tags}
+          link={experience.data.link}
+          notAvailableReason={experience.data.notAvailableReason}
+        >
+          <Content />
+        </ItemCard>
+      );
+    })
+  }
+</section>
