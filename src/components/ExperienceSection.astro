@@ -14,10 +14,10 @@ const experience = await getCollection("experience");
       return (
         <ItemCard
           title={title}
-          date={experience.data.date}
-          tags={experience.data.tags}
-          link={experience.data.link}
-          notAvailableReason={experience.data.notAvailableReason}
+          date={date}
+          tags={tags}
+          link={link}
+          notAvailableReason={notAvailableReason}
         >
           <Content />
         </ItemCard>

@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import Header from "../components/Header.astro";
+import BlogHeader from "../components/BlogHeader.astro";
 
 interface Props {
   title: string;
@@ -21,7 +21,7 @@ const { title } = Astro.props;
     <ClientRouter />
   </head>
   <body class="text-slate-400 grid grid-cols-3 gap-4 bg-slate-900 h-screen">
-    <Header />
+    <BlogHeader />
     <slot />
   </body>
 </html>

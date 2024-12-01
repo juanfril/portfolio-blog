@@ -5,16 +5,16 @@ import Link from "./Link.astro";
 <nav class="hidden sm:block" aria-label="In-page jump links">
   <ul class="flex flex-col gap-4">
     <li>
-      <Link href="about"> About </Link>
+      <Link href="about " samePage={false}> About </Link>
     </li>
     <li>
-      <Link href="experience"> Experience </Link>
+      <Link href="experience" samePage={false}> Experience </Link>
     </li>
     <li>
-      <Link href="projects"> Projects </Link>
+      <Link href="projects" samePage={false}> Projects </Link>
     </li>
     <li>
-      <Link href="/blog" samePage={false}> Blog </Link>
+      <Link href="/blog/" samePage={true}> Blog </Link>
     </li>
   </ul>
 </nav>
